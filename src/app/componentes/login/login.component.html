@@ -1,0 +1,26 @@
+<div class="container py-5">
+    <form  action="" class="mx-auto" style="max-width: 25rem;" #form="ngForm" (ngSubmit) = "login(form)" [formGroup]="formulario">
+        <h1 class="mb-5 text-center">Inicio de Sesion</h1>
+        <div class="mb-3">
+            <label for="username">Nombre</label>
+            <input  name="username" formControlName="username" type="text" class="form-control" [(ngModel)]="creds.username"
+            [ngClass]="{'is-invalid': submitted&&this.formulario.get('username')?.errors}">
+            <div *ngIf="this.formulario.get('username')?.errors" class="invalid-feedback">
+                <!--SI EL CODIGO TIENE ERRORES-->
+                <div *ngIf="this.formulario.get('username')?.errors?.['required']">Campo Requerido</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="password">Contraseña</label>
+            <input name="password" formControlName="password" type="password" class="form-control" [(ngModel)]="creds.password"
+            [ngClass]="{'is-invalid': submitted&&this.formulario.get('password')?.errors}">
+            <div *ngIf="this.formulario.get('password')?.errors" class="invalid-feedback">
+                <!--SI EL CODIGO TIENE ERRORES-->
+                <div *ngIf="this.formulario.get('password')?.errors?.['required']">Campo Requerido</div>
+            </div>
+        </div>
+        <div class="d-grip text-center">
+            <button class="btn btn-lg btn-primary" style="margin-right: 5px;">Ingresar</button>
+        </div>
+    </form>
+</div>
