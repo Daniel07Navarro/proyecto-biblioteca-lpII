@@ -23,7 +23,8 @@ export class RegistrarComponent {
     dni:'',
     email:'',
     direccion:'',
-    password:''
+    password:'',
+    idCliente: 0
   }
 
   registrarse(){

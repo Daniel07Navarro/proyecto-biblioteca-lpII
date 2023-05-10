@@ -1,7 +1,8 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Credentials } from '../modelo/credentials';
+import { Cliente } from '../modelo/cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +36,7 @@ export class ClientesService {
   }
 
   getActualUsurio(){
-    return this.http.get("http://localhost:8080/login/usuarioLogeado");
+    return this.http.get<Cliente>("http://localhost:8080/login/usuarioLogeado");
   }
   
   setUser(user:any){

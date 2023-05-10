@@ -31,7 +31,6 @@ export class LoginComponent {
       //correo:['',Validators.compose([Validators.required,Validators.email])], //PARA VARIAS VALIDACIONES
       //fecha:['',Validators.compose([Validators.required,Validators.pattern(/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/)])],
       //telefono:['',Validators.compose([Validators.required])]
-      
     });
   }
 

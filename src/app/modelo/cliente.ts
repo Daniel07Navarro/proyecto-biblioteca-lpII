@@ -1,4 +1,5 @@
 export class Cliente {
+    idCliente!:number;
     nombreCompleto!:string;
     apellido!:string;
     telefono!:string;

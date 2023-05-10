@@ -10,6 +10,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon'; //PARA LOS ICONOS
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './helpers/auth.interceptor';
 import { RegistrarComponent } from './componentes/registrar/registrar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CuerpoFiccionComponent } from './cuerpo/cuerpo-ficcion/cuerpo-ficcion.component';
+import { CuerpoNoFiccionComponent } from './cuerpo/cuerpo-no-ficcion/cuerpo-no-ficcion.component';
+import { CuerpoRomanceComponent } from './cuerpo/cuerpo-romance/cuerpo-romance.component';
+import { CuerpoHistoriaComponent } from './cuerpo/cuerpo-historia/cuerpo-historia.component';
+import { CuerpoCienciaFiccionComponent } from './cuerpo/cuerpo-ciencia-ficcion/cuerpo-ciencia-ficcion.component';
+import { CuerpoDetallesComponent } from './cuerpo/cuerpo-detalles/cuerpo-detalles.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +41,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     LoginComponent,
     RegistrarComponent,
+    CuerpoFiccionComponent,
+    CuerpoNoFiccionComponent,
+    CuerpoRomanceComponent,
+    CuerpoHistoriaComponent,
+    CuerpoCienciaFiccionComponent,
+    CuerpoDetallesComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +62,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    NgxPaginationModule
   ],
   providers: [
     {
